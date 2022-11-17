@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const db = require('./../db');
+
 
 router.get('/products', (req, res) => {
   req.db.collection('products').find().toArray((err, data) => {
