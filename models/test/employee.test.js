@@ -8,9 +8,6 @@ describe('Employee', () => {
     const emp = new Employee({});
     emp.validate(err => {
       expect(err.errors).to.exist;
-      after(() => {
-        mongoose.models = {};
-      });
     });
   });
 

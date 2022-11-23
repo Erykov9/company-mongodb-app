@@ -7,9 +7,6 @@ describe('Department', () => {
   it('should throw an error if no "name" arg', () => {
     dep.validate(err => {
       expect(err.errors.name).to.exist;
-      after(() => {
-        mongoose.models = {};
-      });
     });
   });
 
